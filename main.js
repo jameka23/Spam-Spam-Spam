@@ -242,7 +242,7 @@ let customers = [
   ];
 
 
-const spamEmails = customers.map(customer => {
-    return customer.contacts.email.map(emailAddy => emailAddy)
-})
-console.log(spamEmails)
+const spamEmails = customers.map(customer => customer.contacts.email)
+
+let allEmails = spamEmails.flat();
+console.log(allEmails)
